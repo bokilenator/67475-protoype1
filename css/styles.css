@@ -1,0 +1,12 @@
+.sidenav-trigger {
+	display: block !important;
+}
+#map {
+	height: calc(100% - (100px + 150px)); 
+	width: 100%;  /* The width is the width of the web page */
+}	
+
+.phone {
+	vertical-align: bottom;
+	padding-right: 8px;
+}
