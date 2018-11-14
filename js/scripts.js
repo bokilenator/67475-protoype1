@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $(document).ready(function(){
     $('.sidenav').sidenav();
-    $('#map').css("height", $( window ).height() - $('nav').height());
+    $('#map').css("height", $( window ).height() - $('nav').height() - $('.search').height());
     $( "#review" ).click(function() {
     	setTimeout(
     	  function() 
