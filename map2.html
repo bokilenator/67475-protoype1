@@ -14,33 +14,91 @@
   </head>
 
   <body>
-    <nav>
-        <div class="nav-wrapper teal darken-4">
-          <a href="home.html" class="brand-logo right">Logo</a>
-          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-          </ul>
-        </div>
-      </nav>
-
-      <ul id="slide-out" class="sidenav">
-        <li><div class="user-view">
-          <div class="background">
-            <img src="images/safety.jpg">
+   <nav>
+          <div class="nav-wrapper teal darken-4">
+            <a href="home.html" class="brand-logo right">CrimeAlert</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            </ul>
           </div>
-          <a href="#user"><img class="circle" src="images/profile.png"></a>
-          <a href="#name"><span class="white-text name">John Doe</span></a>
-          <a href="#email"><span class="white-text email">johndoe@gmail.com</span></a>
-        </div></li>
-        <li><a class="waves-effect" href="login.html"><i class="material-icons">first_page</i>Log Out</a></li>
-        <li><a class="waves-effect" href="settings.html"><i class="material-icons">settings</i>Settings</a></li>
-        <li><div class="divider"></div></li>
-        <!-- <li><a class="subheader">Subheader</a></li> -->
-        <li><a class="waves-effect" href="map1.html"><i class="material-icons">location_on</i>View Map</a></li>
-        <li><a class="waves-effect" href="form.html"><i class="material-icons">edit</i>Report Crime</a></li>
-        <li><a class="waves-effect" href="form.html#modal1"><i class="material-icons">phone</i>Contact Police</a></li>
-      </ul>
+        </nav>
 
+        <ul id="slide-out" class="sidenav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="images/safety.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="images/profile.png"></a>
+            <a href="#name"><span class="white-text name">John Doe</span></a>
+            <a href="#email"><span class="white-text email">johndoe@gmail.com</span></a>
+          </div></li>
+          <li><a class="waves-effect" href="login.html"><i class="material-icons">first_page</i>Log Out</a></li>
+          <li><a class="waves-effect" href="settings.html"><i class="material-icons">settings</i>Settings</a></li>
+          <li><div class="divider"></div></li>
+          <!-- <li><a class="subheader">Subheader</a></li> -->
+          <li><a class="waves-effect" href="map1.html"><i class="material-icons">location_on</i>View Map</a></li>
+          <li><a class="waves-effect" href="pending.html"><i class="material-icons">assignment</i>Pending Reports</a></li>
+          <li><a class="waves-effect" href="form.html"><i class="material-icons">edit</i>Report Crime</a></li>
+          <li><a class="waves-effect" href="form.html#modal1"><i class="material-icons">phone</i>Contact Police</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Legend</a></li>
+          <li class="row">
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/armed_robbery.png"></div>
+              <div class="col s12">Armed Robbery</div>
+            </div>
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/assault.png"></div>
+              <div class="col s12">Assault</div>
+            </div>
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/battery.png"></div>
+              <div class="col s12">Battery</div>
+            </div>
+          </li>
+          <li class="row">
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/drugs.png"></div>
+              <div class="col s12">Drugs</div>
+            </div>
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/hate_crime.png"></div>
+              <div class="col s12">Hate Crime</div>
+            </div>
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/hit_run.png"></div>
+              <div class="col s12">Hit and Run</div>
+            </div>
+          </li>
+          <li class="row">
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/homicide.png"></div>
+              <div class="col s12">Homicide</div>
+            </div>
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/other.png"></div>
+              <div class="col s12">Other</div>
+            </div>
+            <div class="col s4">
+              <div class="col s12"><img src="images/icons/rape.png"></div>
+              <div class="col s12">Rape</div>
+            </div>
+          </li>
+          <li class="row">
+            <div class="col s4 push-s4">
+              <div class="col s12"><img src="images/icons/theft.png"></div>
+              <div class="col s12">Theft</div>
+            </div>
+          </li>
+        </ul>
+
+      <form class="search">
+          <div class="input-field search-field col s12 row">
+            <input class="col s8 push-s2" placeholder="Search for locations or crimes" id="search" type="search" required>
+            <i class="material-icons col s2">search</i>
+          </div>
+          <div class="col s12 center">*Icon Legend in Side Menu</div>
+      </form>
     <div id="map"></div>
 
     <div id="modal4" class="modal">
@@ -51,8 +109,6 @@
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Dismiss</a>
       </div>
     </div>
-
-
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

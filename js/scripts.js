@@ -90,19 +90,40 @@ function initMap(features) {
   addYourLocationButton(map, marker);
 
   //Custom markers
-  var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+  var iconBase = 'images/icons/';
           var icons = {
-            caution: {
-              icon: iconBase + 'caution.png'
+            armed_robbery: {
+              icon: iconBase + 'armed_robbery.png'
             },
-            fire: {
-              icon: iconBase + 'firedept.png'
+            assault: {
+              icon: iconBase + 'assault.png'
             },
-            police: {
-              icon: iconBase + 'police.png'
+            battery: {
+              icon: iconBase + 'battery.png'
             },
-            forbidden: {
-              icon: iconBase + 'forbidden.png'
+            drugs: {
+              icon: iconBase + 'drugs.png'
+            },
+            hate_crime: {
+              icon: iconBase + 'hate_crime.png'
+            },
+            hit_run: {
+              icon: iconBase + 'hit_run.png'
+            },
+            homicide: {
+              icon: iconBase + 'homicide.png'
+            },
+            other: {
+              icon: iconBase + 'other.png'
+            },
+            rape: {
+              icon: iconBase + 'rape.png'
+            },
+            theft: {
+              icon: iconBase + 'theft.png'
+            },
+            pending: {
+              icon: iconBase + 'pulse.gif'
             }
           };
 
@@ -112,6 +133,7 @@ function initMap(features) {
             var marker = new google.maps.Marker({
               position: feature.position,
               icon: icons[feature.type].icon,
+              optimized: false,
               map: map
             });
           });
@@ -141,7 +163,11 @@ function initMap1(){
 }
 
 function initMap2(){
-	initMap(getFeatures2());
+  initMap(getFeatures2());
+}
+
+function initMap3(){
+	initMap(getFeatures3());
 }
 
 
@@ -149,16 +175,16 @@ function getFeatures1() {
 	var res = [
 	    {
 	      position: new google.maps.LatLng(40.444453, -79.948548),
-	      type: 'caution'
+	      type: 'other'
 	    }, {
 	      position: new google.maps.LatLng(40.444673, -79.943033),
-	      type: 'fire'
+	      type: 'hate_crime'
 	    }, {
 	      position: new google.maps.LatLng(40.447018, -79.950689),
-	      type: 'police'
+	      type: 'hit_run'
 	    }, {
 	      position: new google.maps.LatLng(40.442632, -79.937651),
-	      type: 'forbidden'
+	      type: 'rape'
 	    }
 	]
 	return res
@@ -168,22 +194,32 @@ function getFeatures2() {
 	var res = [
 	    {
 	      position: new google.maps.LatLng(40.444453, -79.948548),
-	      type: 'caution'
+	      type: 'other'
 	    }, {
 	      position: new google.maps.LatLng(40.444673, -79.943033),
-	      type: 'fire'
+	      type: 'hate_crime'
 	    }, {
 	      position: new google.maps.LatLng(40.447018, -79.950689),
-	      type: 'police'
+	      type: 'hit_run'
 	    }, {
 	      position: new google.maps.LatLng(40.442632, -79.937651),
-	      type: 'forbidden'
+	      type: 'rape'
 	    }, {
 	      position: new google.maps.LatLng(40.445686, -79.949174),
-	      type: 'police'
+	      type: 'drugs'
 	    }
 	]
 	return res
+}
+
+function getFeatures3() {
+  var res = [
+      {
+        position: new google.maps.LatLng(40.445600, -79.948000),
+        type: 'pending'
+      }
+  ]
+  return res
 }
 
 function addYourLocationButton (map, marker) 
@@ -295,8 +331,8 @@ document.addEventListener('DOMContentLoaded', function() {
     	setTimeout(
     	  function() 
     	  {
-    	    window.location.href = "map2.html#modal4";
-    	  }, 5000);    });
+    	    window.location.href = "pending.html";
+    	  }, 3000);    });
 
   });
 
